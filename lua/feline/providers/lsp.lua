@@ -12,7 +12,7 @@ function M.is_lsp_attached()
 end
 
 function M.get_diagnostics_count(severity)
-    if vim.fn.has("nvim-0.6") == 1 then
+    if vim.fn.has("nvim-0.7") == 1 then
         return vim.tbl_count(diagnostic.get(0, severity and { severity = severity }))
     else
         -- TODO: drop this when 0.5 is no longer used
